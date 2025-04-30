@@ -1,54 +1,55 @@
-# React + TypeScript + Vite
+# City Weather Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**City Weather Finder** is a responsive web application that allows users to search for real-time weather information by city. Built with React, TypeScript, and Vite, it integrates with the OpenWeatherMap API to fetch and display current weather conditions in a clean and user-friendly interface.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- City-based search for real-time weather data.
+- Displays temperature, weather conditions, humidity, and more.
+- Fully responsive and optimized for both desktop and mobile use.
+- Built with modern technologies like React, TypeScript, and Vite.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Frontend: React, TypeScript, Vite
+- API: [OpenWeatherMap API](https://openweathermap.org/api)
+- Styling: CSS
+- Tooling: Vite, ESLint
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- npm or yarn
+
+### Installation
+
+Clone the repository:
+
+   ```bash
+   git clone https://github.com/benwesson/city_weather_finder.git
+   cd city_weather_finder
+   Install dependencies:
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+### Install Dependencies
+```bash
+npm install
+# or
+yarn install
+
+```
+### Environment Variable 
+```bash
+Create a .env file in the root directory and add your OpenWeatherMap API key:
+VITE_WEATHER_API_KEY=your_openweathermap_api_key
+```
+### Run Devlopment Server
+```bash
+npm run dev
+# or
+yarn dev
 ```
